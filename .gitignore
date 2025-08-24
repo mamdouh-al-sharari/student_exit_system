@@ -1,0 +1,14 @@
+/node_modules
+/.dart_tool
+/.packages
+/.flutter-plugins
+/.flutter-plugins-dependencies
+/.metadata
+/build/
+/android/app/debug
+/ios/
+/.idea/
+/*.iml
+/.vscode/
+/*.log
+/pubspec.lock
