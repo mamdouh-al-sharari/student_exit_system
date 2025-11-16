@@ -58,7 +58,7 @@ class AuthProvider with ChangeNotifier {
 
       notifyListeners();
     } catch (error) {
-      throw error;
+      rethrow;
     }
   }
 
@@ -87,7 +87,7 @@ class AuthProvider with ChangeNotifier {
         throw Exception(errorData['message'] ?? 'فشل في التسجيل');
       }
     } catch (error) {
-      throw error;
+      rethrow;
     }
   }
 
@@ -139,7 +139,7 @@ class AuthProvider with ChangeNotifier {
         throw Exception('بيانات الدخول غير صحيحة');
       }
     } catch (error) {
-      throw error;
+      rethrow;
     }
   }
 
@@ -147,7 +147,7 @@ class AuthProvider with ChangeNotifier {
     try {
       // تحتاج إنشاء API جديد لاسترجاع طلبات ولي الأمر النشطة
       final response = await http.get(
-        Uri.parse('${ApiService.baseUrl}/parents/${_userId}/active-requests'),
+        Uri.parse('${ApiService.baseUrl}/parents/$_userId/active-requests'),
       );
       
       if (response.statusCode == 200) {

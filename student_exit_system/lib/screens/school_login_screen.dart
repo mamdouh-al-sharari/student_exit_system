@@ -3,7 +3,7 @@ import 'package:provider/provider.dart';
 import '../providers/auth_provider.dart';
 
 class SchoolLoginScreen extends StatefulWidget {
-  const SchoolLoginScreen({Key? key}) : super(key: key);
+  const SchoolLoginScreen({super.key});
 
   @override
   _SchoolLoginScreenState createState() => _SchoolLoginScreenState();
@@ -103,10 +103,10 @@ class _SchoolLoginScreenState extends State<SchoolLoginScreen> {
                   ? const CircularProgressIndicator()
                   : ElevatedButton(
                       onPressed: _submit,
-                      child: const Text('دخول', style: TextStyle(fontSize: 18)),
                       style: ElevatedButton.styleFrom(
                         minimumSize: const Size(double.infinity, 50),
                       ),
+                      child: const Text('دخول', style: TextStyle(fontSize: 18)),
                     ),
             ],
           ),

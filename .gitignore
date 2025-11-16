@@ -1,14 +1,15 @@
-/node_modules
-/.dart_tool
-/.packages
-/.flutter-plugins
-/.flutter-plugins-dependencies
-/.metadata
-/build/
-/android/app/debug
-/ios/
-/.idea/
-/*.iml
-/.vscode/
-/*.log
-/pubspec.lock
+# Node.js
+backend/node_modules/
+backend/.env
+
+# Flutter
+student_exit_system/build/
+student_exit_system/.dart_tool/
+
+# IDE
+.idea/
+.vscode/
+
+# System
+.DS_Store
+*.log

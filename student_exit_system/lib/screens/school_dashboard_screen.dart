@@ -7,7 +7,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 class SchoolDashboardScreen extends StatefulWidget {
-  const SchoolDashboardScreen({Key? key}) : super(key: key);
+  const SchoolDashboardScreen({super.key});
 
   @override
   State<SchoolDashboardScreen> createState() => _SchoolDashboardScreenState();
@@ -91,7 +91,7 @@ class _SchoolDashboardScreenState extends State<SchoolDashboardScreen> {
         throw Exception('فشل في تحميل الطلاب');
       }
     } catch (error) {
-      throw error;
+      rethrow;
     }
   }
 

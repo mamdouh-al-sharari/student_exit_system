@@ -4,7 +4,7 @@ import '../providers/auth_provider.dart';
 
 
 class RegisterScreen extends StatefulWidget {
-  const RegisterScreen({Key? key}) : super(key: key);
+  const RegisterScreen({super.key});
 
   @override
   _RegisterScreenState createState() => _RegisterScreenState();
@@ -64,8 +64,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 keyboardType: TextInputType.phone,
                 validator: (value) {
                   if (value!.isEmpty) return 'أدخل رقم الجوال';
-                  if (value.length != 10)
+                  if (value.length != 10) {
                     return 'رقم الجوال يجب أن يكون 10 أرقام';
+                  }
                   return null;
                 },
               ),
@@ -75,8 +76,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 obscureText: true,
                 validator: (value) {
                   if (value!.isEmpty) return 'أدخل كلمة المرور';
-                  if (value.length < 6)
+                  if (value.length < 6) {
                     return 'كلمة المرور يجب أن تكون 6 أحرف على الأقل';
+                  }
                   return null;
                 },
               ),
@@ -85,10 +87,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   ? const CircularProgressIndicator()
                   : ElevatedButton(
                       onPressed: _submit,
-                      child: const Text('إنشاء الحساب'),
                       style: ElevatedButton.styleFrom(
                         minimumSize: const Size(double.infinity, 50),
                       ),
+                      child: const Text('إنشاء الحساب'),
                     ),
             ],
           ),

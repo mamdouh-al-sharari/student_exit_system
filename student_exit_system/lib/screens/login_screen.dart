@@ -4,6 +4,8 @@ import '../providers/auth_provider.dart';
 import 'register_screen.dart';
 
 class LoginScreen extends StatefulWidget {
+  const LoginScreen({super.key});
+
   @override
   _LoginScreenState createState() => _LoginScreenState();
 }
@@ -105,12 +107,12 @@ class _LoginScreenState extends State<LoginScreen> {
                   ? CircularProgressIndicator()
                   : ElevatedButton(
                       onPressed: _submit,
+                      style: ElevatedButton.styleFrom(
+                        minimumSize: Size(double.infinity, 50),
+                      ),
                       child: Text(
                         'تسجيل الدخول',
                         style: TextStyle(fontSize: 18),
-                      ),
-                      style: ElevatedButton.styleFrom(
-                        minimumSize: Size(double.infinity, 50),
                       ),
                     ),
 

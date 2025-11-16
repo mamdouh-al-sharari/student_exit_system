@@ -7,7 +7,7 @@ import '../models/student_model.dart';
 class RequestExitScreen extends StatefulWidget {
   final Student student;
 
-  RequestExitScreen({required this.student});
+  const RequestExitScreen({super.key, required this.student});
 
   @override
   _RequestExitScreenState createState() => _RequestExitScreenState();
@@ -83,12 +83,12 @@ class _RequestExitScreenState extends State<RequestExitScreen> {
                 ? Center(child: CircularProgressIndicator())
                 : ElevatedButton(
                     onPressed: _submitRequest,
+                    style: ElevatedButton.styleFrom(
+                      minimumSize: Size(double.infinity, 50),
+                    ),
                     child: Text(
                       'إرسال طلب الخروج',
                       style: TextStyle(fontSize: 18),
-                    ),
-                    style: ElevatedButton.styleFrom(
-                      minimumSize: Size(double.infinity, 50),
                     ),
                   ),
           ],

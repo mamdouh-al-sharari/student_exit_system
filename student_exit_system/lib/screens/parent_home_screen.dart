@@ -6,6 +6,8 @@ import 'request_exit_screen.dart';
 import '../services/api_service.dart';
 
 class ParentHomeScreen extends StatefulWidget {
+  const ParentHomeScreen({super.key});
+
   @override
   _ParentHomeScreenState createState() => _ParentHomeScreenState();
 }
@@ -113,11 +115,11 @@ class _ParentHomeScreenState extends State<ParentHomeScreen> {
                         ElevatedButton(
                           onPressed: () => _completeRequest(
                             'request_id_here',
-                          ), // تحتاج معرفة ID الطلب
-                          child: Text('تم الاستلام'),
+                          ),
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.green,
-                          ),
+                          ), // تحتاج معرفة ID الطلب
+                          child: Text('تم الاستلام'),
                         ),
                       ],
                     ),

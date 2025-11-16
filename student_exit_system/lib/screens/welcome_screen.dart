@@ -4,7 +4,7 @@ import 'school_login_screen.dart';
 
 
 class WelcomeScreen extends StatelessWidget {
-  const WelcomeScreen({Key? key}) : super(key: key);
+  const WelcomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -36,10 +36,10 @@ class WelcomeScreen extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => LoginScreen()),
                 );
               },
-              child: const Text('دخول ولي الأمر'),
               style: ElevatedButton.styleFrom(
                 minimumSize: const Size(double.infinity, 50),
               ),
+              child: const Text('دخول ولي الأمر'),
             ),
             const SizedBox(height: 20),
 
@@ -53,10 +53,10 @@ class WelcomeScreen extends StatelessWidget {
                   ),
                 );
               },
-              child: const Text('دخول المدرسة'),
               style: ElevatedButton.styleFrom(
                 minimumSize: const Size(double.infinity, 50),
               ),
+              child: const Text('دخول المدرسة'),
             ),
             const SizedBox(height: 30),
 
